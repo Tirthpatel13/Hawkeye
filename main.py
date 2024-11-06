@@ -12,7 +12,7 @@ while True:
     frame_h, frame_w, _ = frame.shape
     if landmark:
         landmarks = landmark[0].landmark
-        for landmark in landmarks:
+        for id, landmark in enumerate(landmarks[474:478]):
             x = int(landmark.x * frame_w)
             y = int(landmark.y * frame_h)
             cv2.circle(frame, (x, y), 3, (0, 255, 0))
